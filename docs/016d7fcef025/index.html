@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>recorderBot 使用说明 - 庇护所</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="庇护所"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="庇护所"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="此为版本草图, 插件仍处于预开发周期.你可以在此处找到项目的 Github 仓库. 简介recorderBot 是由 XavierWah 开发用于 MCDReforged 的插件. 此插件基于 carpet 的 &amp;#x2F;player 命令进行拓展, 加入了记录信息, 查询历史记录等功能, 辅助玩家在服务器中更好的使用 Bot 协作.此使用说明适用于 recorderBot v1.0-alpha ."><meta property="og:type" content="article"><meta property="og:title" content="recorderBot 使用说明"><meta property="og:url" content="https://xavierwah.xyz/016d7fcef025/"><meta property="og:site_name" content="庇护所"><meta property="og:description" content="此为版本草图, 插件仍处于预开发周期.你可以在此处找到项目的 Github 仓库. 简介recorderBot 是由 XavierWah 开发用于 MCDReforged 的插件. 此插件基于 carpet 的 &amp;#x2F;player 命令进行拓展, 加入了记录信息, 查询历史记录等功能, 辅助玩家在服务器中更好的使用 Bot 协作.此使用说明适用于 recorderBot v1.0-alpha ."><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://xavierwah.xyz/img/og_image.png"><meta property="article:published_time" content="2021-07-26T13:59:41.000Z"><meta property="article:modified_time" content="2021-08-03T06:24:13.000Z"><meta property="article:author" content="Xavier Wah"><meta property="article:tag" content="Python"><meta property="article:tag" content="Minecraft"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xavierwah.xyz/016d7fcef025/"},"headline":"recorderBot 使用说明","image":["https://xavierwah.xyz/img/og_image.png"],"datePublished":"2021-07-26T13:59:41.000Z","dateModified":"2021-08-03T06:24:13.000Z","author":{"@type":"Person","name":"Xavier Wah"},"publisher":{"@type":"Organization","name":"庇护所","logo":{"@type":"ImageObject","url":"https://xavierwah.xyz/img/logo.svg"}},"description":"此为版本草图, 插件仍处于预开发周期.你可以在此处找到项目的 Github 仓库. 简介recorderBot 是由 XavierWah 开发用于 MCDReforged 的插件. 此插件基于 carpet 的 &#x2F;player 命令进行拓展, 加入了记录信息, 查询历史记录等功能, 辅助玩家在服务器中更好的使用 Bot 协作.此使用说明适用于 recorderBot v1.0-alpha ."}</script><link rel="canonical" href="https://xavierwah.xyz/016d7fcef025/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/foundation.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css"><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="庇护所" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/timeline">时间轴</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="给我写信" href="mailto:xavierwah@xavierwah.xyz"><i class="fa fa-envelope"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-26T13:59:41.000Z" title="7/26/2021, 9:59:41 PM">2021-07-26</time>发表</span><span class="level-item"><time dateTime="2021-08-03T06:24:13.000Z" title="8/3/2021, 2:24:13 PM">2021-08-03</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Minecraft/">Minecraft</a></span><span class="level-item">8 分钟读完 (大约1147个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">recorderBot 使用说明</h1><div class="content"><p><strong>此为版本草图, 插件仍处于预开发周期.</strong><br>你可以在<a target="_blank" rel="noopener" href="https://github.com/XavierWah/recorderBot">此处</a>找到项目的 Github 仓库.</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>recorderBot 是由 XavierWah 开发用于 MCDReforged 的插件. 此插件基于 carpet 的 <code>/player</code> 命令进行拓展, 加入了记录信息, 查询历史记录等功能, 辅助玩家在服务器中更好的使用 Bot 协作.<br>此使用说明适用于 <code>recorderBot v1.0-alpha</code> .</p>
+<span id="more"></span>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>请将 recorderBot 主体以及其 API 目录放入任一 MCDReforged 插件目录中 ( 默认为 <code>/plugins</code> ) , 并启动 MCDReforged , 等待插件向 <code>/recorderBot</code> 中写入日志文件等信息, 本插件运行中储存的任何数据都将保存在此目录中.</p>
+<h1 id="指令大纲"><a href="#指令大纲" class="headerlink" title="指令大纲"></a>指令大纲</h1><ul>
+<li><strong><code>!!bot</code></strong> 插件总指令, 调出帮助菜单.</li>
+<li><strong><code>!!bot create</code></strong> [参数] 生成 Bot .</li>
+<li><strong><code>!!bot info</code></strong> &lt; Bot 识别号&gt; 查询 Bot 的信息.</li>
+<li><strong><code>!!bot list</code></strong> [页码] 查看服务器内的 Bot .</li>
+<li><strong><code>!!bot modify</code></strong> &lt; Bot 识别号&gt; &lt;修改项&gt; [修改值] 修改 Bot 的属性.</li>
+<li><strong><code>!!bot remove</code></strong> &lt; Bot 识别号&gt; 删除 Bot .  </li>
+</ul>
+<p><strong>其中&lt;&gt;表示必须项, [ ]表示可选项. 下同.</strong></p>
+<h1 id="Bot-识别号"><a href="#Bot-识别号" class="headerlink" title="Bot 识别号"></a>Bot 识别号</h1><p>Bot 识别号用于分辨不同的 Bot , 在本插件的使用过程中十分重要. 每个 Bot 识别号指代唯一的 Bot , 但多个 Bot 识别号可用于指代同一个 Bot . Bot 识别号使用以下方法生成:</p>
+<ul>
+<li><strong>名称</strong> 直接使用 Bot 的游戏名. 此处是否加入 <em>Bot_</em> 前缀均可识别.</li>
+<li><strong>序号</strong> 使用 Bot 生成时的唯一序号.</li>
+</ul>
+<h1 id="bot-create-详解"><a href="#bot-create-详解" class="headerlink" title="!!bot create 详解"></a><code>!!bot create</code> 详解</h1><p><code>!!bot create</code> 用于生成 Bot . 其后可选的参数用来指定其坐标, 注释, 名称, 占用时长等属性. 若使用 <code>/player spawn</code> 生成 Bot , 其属性同样将被记录至此插件. <code>!!bot create</code> 可接受参数, 使 Bot 在生成时即拥有某些属性. 参数应逐个追加在命令后, 错误的格式有可能导致插件解析错误, 以下是可选参数:</p>
+<ul>
+<li><strong><code>-autoleave 或 -a</code></strong> 设置 Bot 到时后自动退出，此项无需参数. 必须与 <code>-time</code> 共同使用.</li>
+<li><strong><code>-coordinate 或 -c</code> &lt;X坐标&gt; &lt;Y坐标&gt; &lt;Z坐标&gt;</strong> 指定 Bot 坐标, 必须为整数. 默认为创建Bot时的坐标.</li>
+<li><strong><code>-description 或 -d</code> &lt;注释内容&gt;</strong> 注释 Bot , 可用于记录Bot的作用等, 为字符串, 多个空格将会被缩减为单个. 默认为创建Bot时的坐标.</li>
+<li><strong><code>-name 或 -n</code> &lt;名称&gt;</strong> 指定 Bot 名称, 必须为字母、数字或下划线. 默认为其创建时的时间.</li>
+<li><strong><code>-time 或 -t</code> &lt;时间&gt;</strong> 指定占用 Bot 的时长, 为一连续字符串(不可包含空格). 此占用时长仅作为显示, 提示他人何时合适将Bot删除, 并不阻挡玩家删除Bot. 默认为随时可以删除. 下列形式可表述此处的时长：<ul>
+<li><strong>时长</strong> 例如 <code>10m</code> 表示 10 分钟内一直有用处, <code>1d12h</code> 表示 1 天 12 小时内一直有用处, <code>1d</code> 表示一天内一直有用处等. 支持 <code>m</code> (分钟), <code>h</code> (小时), <code>d</code> (天)等单位, 不同时间单位可以混用. 当时长结束时, 将自动改为 <code>instant</code> .</li>
+<li><strong>特殊</strong> 仅有 <code>eternity</code> (或 <code>e</code> , 永远不要删除)与 <code>instant</code> (或 <code>i</code> , 随时可以删除)这 2 种候选. 如果你不清楚具体需要使用多久Bot, 那么推荐选用此种表述.</li>
+</ul>
+</li>
+</ul>
+<h1 id="bot-modify-详解"><a href="#bot-modify-详解" class="headerlink" title="!!bot modify 详解"></a><code>!!bot modify</code> 详解</h1><p><code>!!bot modify</code> 用于修改 Bot 的属性, 可以在不重新生成 Bot 的基础上修改如注释, 名称, 使用玩家, 占用时长等属性. 修改项代表将要修改的属性名, 不同的属性名对应不同格式的修改值, 以下是可选修改项:</p>
+<ul>
+<li><strong><code>autoleave 或 a</code></strong> 设置 Bot 到时后是否自动退出, 修改值为 <code>true</code> 或 <code>false</code> .</li>
+<li><strong><code>description 或 d</code></strong> 修改 Bot 的注释, 修改值为字符串.</li>
+<li><strong><code>name 或 n</code></strong> 修改 Bot 的名称, 修改值为字母、数字或下划线. 修改此项时, Bot 将重新进入游戏.</li>
+<li><strong><code>takeover</code></strong> 修改使用 Bot 的玩家, 此项无需填入修改值, 自动修改为输入指令的玩家.</li>
+<li><strong><code>time 或 t</code></strong> 修改占用 Bot 的时长, 请参照<code>!!bot create -t</code>部分填入内容. 在字符串前添加单个字符<code>+</code>表示在原有时间上延长对应时间, 添加单个字符<code>-</code>表示在原有时长上缩短对应时间.</li>
+</ul>
+<h1 id="v2-的坑先挖起来"><a href="#v2-的坑先挖起来" class="headerlink" title="v2 的坑先挖起来"></a>v2 的坑先挖起来</h1><ul>
+<li>增加 <code>!!bot history</code> 语法, 支持查看曾经的 Bot .</li>
+<li>增加 <code>!!bot create -resume</code> 语法, 支持恢复曾经的 Bot .</li>
+</ul>
+<h1 id="v3-的坑先挖起来"><a href="#v3-的坑先挖起来" class="headerlink" title="v3 的坑先挖起来"></a>v3 的坑先挖起来</h1><ul>
+<li>增加 <code>!!bot preset</code>, <code>!!bot create preset</code> 语法, 支持自定义 Bot 模板.</li>
+<li>增加 <code>!!bot schedule</code> 语法, 支持自定义 Bot 工作周期.</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>recorderBot 使用说明</p><p><a href="https://xavierwah.xyz/016d7fcef025/">https://xavierwah.xyz/016d7fcef025/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Xavier Wah</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-08-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Python/">Python</a><a class="link-muted mr-2" rel="tag" href="/tags/Minecraft/">Minecraft</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">你的打赏可以激励我做的更好</h3><div class="buttons is-centered"><a class="button donate" href="https://afdian.net/@xavierwah" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/alipay.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/wechat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/403eb398f481/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">激励栏改为爱发电入口啦</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/80ca1653686e/"><span class="level-item">获取Minecraft正版玩家皮肤</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "4e35e635b8dddeee6798a505b05a292e",
+            repo: "Shelter",
+            owner: "XavierWah",
+            clientID: "a88bbbfa8b620fa4a037",
+            clientSecret: "82522ce56fa359c613c1f2696238a6c0894bc288",
+            admin: ["XavierWah"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#简介"><span class="level-left"><span class="level-item">1</span><span class="level-item">简介</span></span></a></li><li><a class="level is-mobile" href="#安装"><span class="level-left"><span class="level-item">2</span><span class="level-item">安装</span></span></a></li><li><a class="level is-mobile" href="#指令大纲"><span class="level-left"><span class="level-item">3</span><span class="level-item">指令大纲</span></span></a></li><li><a class="level is-mobile" href="#Bot-识别号"><span class="level-left"><span class="level-item">4</span><span class="level-item">Bot 识别号</span></span></a></li><li><a class="level is-mobile" href="#bot-create-详解"><span class="level-left"><span class="level-item">5</span><span class="level-item">!!bot create 详解</span></span></a></li><li><a class="level is-mobile" href="#bot-modify-详解"><span class="level-left"><span class="level-item">6</span><span class="level-item">!!bot modify 详解</span></span></a></li><li><a class="level is-mobile" href="#v2-的坑先挖起来"><span class="level-left"><span class="level-item">7</span><span class="level-item">v2 的坑先挖起来</span></span></a></li><li><a class="level is-mobile" href="#v3-的坑先挖起来"><span class="level-left"><span class="level-item">8</span><span class="level-item">v3 的坑先挖起来</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="庇护所" height="28"></a><p class="is-size-7"><span>&copy; 2021 Xavier Wah</span> 永远好奇</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="CC BY-NC 4.0" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Bilibili" href="https://space.bilibili.com/272835279"><i class="fa fa-play"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/XavierWah"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><div id="outdated"><h6>Your browser is out-of-date!</h6><p>Update your browser to view this website correctly.&amp;npsb;<a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p><p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">×</a></p></div><script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script><script>window.addEventListener("load", function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'object-fit' // display on IE11 or below
+            });
+        });</script><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
