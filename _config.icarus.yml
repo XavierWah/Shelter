@@ -287,6 +287,7 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
+            道山文社: https://szzx.live/
             罗·欧文的新哈莫尼: https://owens-nh.xyz/
             苏州中学树莓社: https://shumei1000.com/
             自由领土 - dingZvel的博客: https://dingzvel.github.io/
