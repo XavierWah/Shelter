@@ -1,4 +1,4 @@
-cd /root/xavierwah.xyz
+cd /xav/xavierwah.xyz
 rm docs -rf
 hexo clean
 hexo generate
